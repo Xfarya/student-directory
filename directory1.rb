@@ -1,31 +1,33 @@
-def input_students
-    puts "Please enter the names of the students"
-    puts "To finish, just hit return twice"
-    # create an empty array
-    students = []
-    # get the first name
-    name = gets.chomp
-    # while the name is not empty, repeat this code
-    while !name.empty? do
-      # add the student hash to the array
-      students << {name: name, cohort: :november}
-      puts "Now we have #{students.count} students"
-      # get another name from the user
-      name = gets.chomp
-    end
-    # return the array of students
-    students
-  end
+# def input_students
+#     puts "Please enter the names of the students"
+#     puts "To finish, just hit return twice"
+#     # create an empty array
+#     students = []
+#     # get the first name
+#     name = gets.chomp
+#     # while the name is not empty, repeat this code
+#     while !name.empty? do
+#       # add the student hash to the array
+#       students << {name: name, cohort: :november}
+#       puts "Now we have #{students.count} students"
+#       # get another name from the user
+#       name = gets.chomp
+#     end
+#     # return the array of students
+#     students
+#   end
 
 
-    # # students.each do |initial|
-    # # if ("#{initial[:name][0]}" == letter)
-    # #  puts "#{initial[:name]}"
-    # # end
-    # # end
-    # # end
+ 
+# def numbered_names
 
-def numbered_names
+#     students.each_with_index do |numbered_list, i|
+#         puts "#{(i +1)}. #{numbered_list[:name]}"
+#     end
+# end
+# numbered_names
+
+def first_letter(letter)
     students = [
         {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: :cannibalism, country_of_birth: :Japan, height: 179 },
         {name: "Darth Vader", cohort: :november, hobbies: :spacewars, country_of_birth: :India, height: 169 },
@@ -39,8 +41,11 @@ def numbered_names
         {name: "Joffrey Baratheon", cohort: :november, hobbies: :got, country_of_birth: :Portugal, height: 185 },
         {name: "Norman Bates", cohort: :november, hobbies: :killing, country_of_birth: :Spain, height: 182 }
     ]
-    students.each_with_index do |numbered_list, i|
-        puts "#{(i +1)}. #{numbered_list[:name]}"
-    end
+  students.each do |initial|
+if ("#{initial[:name][0]}" == letter)
+    puts "#{initial[:name]}"
 end
-numbered_names
+end
+end
+
+first_letter("N")
