@@ -44,14 +44,27 @@ end
 end
 
 def load_students(filename = "students.csv")
+    puts "Enter filename"
+filename = STDIN.gets.chomp 
+# return if filename.nil?
+# end
+if File.exists?(filename)
     file = File.open(filename, "r")
     file.readlines.each do |line|
         name, cohort = line.chomp.split(',')
         addstudents(name, cohort)
     end
-    puts "Success! Student list loaded from csv file"
-    file.close
+puts "Loaded #{@students.count} from #{filename}"
+elsif
+        puts "Sorry, #{filename} doesn't exist."
+        exit
+    end
+file.close
 end
+
+    
+
+
 # students = [
 #     {name: "Dr. Hannibal Lecter", cohort: :november},
 #     {name: "Darth Vader", cohort: :november},
@@ -102,13 +115,20 @@ def process(selection)
 end
 
 def save_students
- file = File.open("students.csv", "w")
- @students.each do |student| 
-    student_data = [student[:name], student[:cohort]]
-    csv_line = student_data.join(",")
-    file.puts csv_line
- end
- puts "Success! Student list saved to csv file"
+puts "Enter filename"
+filename = STDIN.gets.chomp 
+if File.exists?(filename)
+    file = File.open(filename, "w")
+    @students.each do |student| 
+       student_data = [student[:name], student[:cohort]]
+       csv_line = student_data.join(",")
+       file.puts csv_line
+    end
+puts "Saved #{@students.count} to #{filename}"
+else 
+    puts "Sorry, #{filename} doesn't exist."
+    exit
+end
  file.close
 end
 
