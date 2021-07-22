@@ -49,6 +49,7 @@ def load_students(filename = "students.csv")
         name, cohort = line.chomp.split(',')
         addstudents(name, cohort)
     end
+    puts "Success! Student list loaded from csv file"
     file.close
 end
 # students = [
@@ -107,6 +108,7 @@ def save_students
     csv_line = student_data.join(",")
     file.puts csv_line
  end
+ puts "Success! Student list saved to csv file"
  file.close
 end
 
