@@ -63,8 +63,8 @@ students = [
     {name: "Norman Bates", cohort: :november, hobbies: :killing, country_of_birth: :Spain, height: 182 }
 ]
 
-n = 0
-while n < students.length do
-    puts students[n][:name]
-    n += 1
-end
+# n = 0
+# while n < students.length do
+#     puts students[n][:name]
+#     n += 1
+# end
