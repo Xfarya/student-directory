@@ -37,25 +37,34 @@
 
 # first_letter("N")
 
-def less_than_twelve
-    students = [
-        {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: :cannibalism, country_of_birth: :Japan, height: 179 },
-        {name: "Darth Vader", cohort: :november, hobbies: :spacewars, country_of_birth: :India, height: 169 },
-        {name: "Nurse Ratched", cohort: :november, hobbies: :battleaxing, country_of_birth: :France, height: 173 },
-        {name: "Michael Corleone", cohort: :november, hobbies: :mafia, country_of_birth: :Turkey, height: 158 },
-        {name: "Alex DeLarge", cohort: :november, hobbies: :villainy, country_of_birth: :England, height: 167 },
-        {name: "The Wicked Witch of the West", cohort: :november, hobbies: :makeup, country_of_birth: :Scotland, height: 141 },
-        {name: "Terminator", cohort: :november, hobbies: :killing, country_of_birth: :Lebanon, height: 199 },
-        {name: "Freddy Krueger", cohort: :november, hobbies: :killing, country_of_birth: :Dubai, height: 171 },
-        {name: "The Joker", cohort: :november, hobbies: :pranks, country_of_birth: :Germany, height: 162 },
-        {name: "Joffrey Baratheon", cohort: :november, hobbies: :got, country_of_birth: :Portugal, height: 185 },
-        {name: "Norman Bates", cohort: :november, hobbies: :killing, country_of_birth: :Spain, height: 182 }
-    ]
-students.each do |student|
-        if "#{student[:name]}".length < 12
-            puts "#{student[:name]}"
-        end
-    end
-end
+# def less_than_twelve
+  
+# students.each do |student|
+#         if "#{student[:name]}".length < 12
+#             puts "#{student[:name]}"
+#         end
+#     end
+# end
 
-less_than_twelve
+# less_than_twelve
+
+
+students = [
+    {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: :cannibalism, country_of_birth: :Japan, height: 179 },
+    {name: "Darth Vader", cohort: :november, hobbies: :spacewars, country_of_birth: :India, height: 169 },
+    {name: "Nurse Ratched", cohort: :november, hobbies: :battleaxing, country_of_birth: :France, height: 173 },
+    {name: "Michael Corleone", cohort: :november, hobbies: :mafia, country_of_birth: :Turkey, height: 158 },
+    {name: "Alex DeLarge", cohort: :november, hobbies: :villainy, country_of_birth: :England, height: 167 },
+    {name: "The Wicked Witch of the West", cohort: :november, hobbies: :makeup, country_of_birth: :Scotland, height: 141 },
+    {name: "Terminator", cohort: :november, hobbies: :killing, country_of_birth: :Lebanon, height: 199 },
+    {name: "Freddy Krueger", cohort: :november, hobbies: :killing, country_of_birth: :Dubai, height: 171 },
+    {name: "The Joker", cohort: :november, hobbies: :pranks, country_of_birth: :Germany, height: 162 },
+    {name: "Joffrey Baratheon", cohort: :november, hobbies: :got, country_of_birth: :Portugal, height: 185 },
+    {name: "Norman Bates", cohort: :november, hobbies: :killing, country_of_birth: :Spain, height: 182 }
+]
+
+n = 0
+while n < students.length do
+    puts students[n][:name]
+    n += 1
+end
