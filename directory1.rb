@@ -1,35 +1,39 @@
-def input_students
-    puts "Please enter the names of the students"
-    puts "To finish, just hit return twice"
-    # create an empty array
-    students = []
-    # get the first name
-    name = gets.chomp
+# def input_students
+#     puts "Please enter the names of the students"
+#     puts "To finish, just hit return twice"
+#     # create an empty array
+#     students = []
+#     # get the first name
+#     name = gets.chomp
 
-    cohort = gets.chomp.to_sym
+#     cohort = gets.chomp.to_sym
   
-    # while the name is not empty, repeat this code
-    while !name.empty? && !cohort.empty? do
-      # add the student hash to the array
-      students << {name: name, cohort: cohort}
-      puts "Now we have #{students.count} students"
-      # get another name from the user
-      name = gets.chomp
-      if (name.empty?)
-        name = "empty"
-    end
-      cohort = gets.chomp.to_sym
-      if (cohort.empty?)
-        cohort = "empty"
-    end
-    if (name == "empty") && (cohort == "empty")
-        break
-    end
-    # return the array of students
-    students
-  end
-end
-input_students
+#     # while the name is not empty, repeat this code
+#     while !name.empty? && !cohort.empty? do
+#       # add the student hash to the array
+#       students << {name: name, cohort: cohort}
+#       puts "Now we have #{students.count} students"
+#       # get another name from the user
+#       name = gets.chomp
+#       if (name.empty?)
+#         name = "empty"
+#     end
+#       cohort = gets.chomp.to_sym
+#       if (cohort.empty?)
+#         cohort = "empty"
+#     end
+#     if (name == "empty") && (cohort == "empty")
+#         break
+#     end
+#     # return the array of students
+#     students
+#   end
+# end
+# input_students
+
+
+
+
  
 # def numbered_names
 
@@ -69,23 +73,36 @@ input_students
 # end
 
 # def center
-#     students = [
-#         {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: :cannibalism, country_of_birth: :Japan, height: 179 },
-#         {name: "Darth Vader", cohort: :november, hobbies: :spacewars, country_of_birth: :India, height: 169 },
-#         {name: "Nurse Ratched", cohort: :november, hobbies: :battleaxing, country_of_birth: :France, height: 173 },
-#         {name: "Michael Corleone", cohort: :november, hobbies: :mafia, country_of_birth: :Turkey, height: 158 },
-#         {name: "Alex DeLarge", cohort: :november, hobbies: :villainy, country_of_birth: :England, height: 167 },
-#         {name: "The Wicked Witch of the West", cohort: :november, hobbies: :makeup, country_of_birth: :Scotland, height: 141 },
-#         {name: "Terminator", cohort: :november, hobbies: :killing, country_of_birth: :Lebanon, height: 199 },
-#         {name: "Freddy Krueger", cohort: :november, hobbies: :killing, country_of_birth: :Dubai, height: 171 },
-#         {name: "The Joker", cohort: :november, hobbies: :pranks, country_of_birth: :Germany, height: 162 },
-#         {name: "Joffrey Baratheon", cohort: :november, hobbies: :got, country_of_birth: :Portugal, height: 185 },
-#         {name: "Norman Bates", cohort: :november, hobbies: :killing, country_of_birth: :Spain, height: 182 }
-#     ]
-    
 # students.each do |student|
 #     puts "#{student[:name]}".center(50)
 #     end
 # end
 
 # center
+
+
+students = [
+            {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: :cannibalism, country_of_birth: :Japan, height: 179 },
+            {name: "Darth Vader", cohort: :november, hobbies: :spacewars, country_of_birth: :India, height: 169 },
+            {name: "Nurse Ratched", cohort: :november, hobbies: :battleaxing, country_of_birth: :France, height: 173 },
+            {name: "Michael Corleone", cohort: :november, hobbies: :mafia, country_of_birth: :Turkey, height: 158 },
+            {name: "Alex DeLarge", cohort: :november, hobbies: :villainy, country_of_birth: :England, height: 167 },
+            {name: "The Wicked Witch of the West", cohort: :november, hobbies: :makeup, country_of_birth: :Scotland, height: 141 },
+            {name: "Terminator", cohort: :november, hobbies: :killing, country_of_birth: :Lebanon, height: 199 },
+            {name: "Freddy Krueger", cohort: :november, hobbies: :killing, country_of_birth: :Dubai, height: 171 },
+            {name: "The Joker", cohort: :november, hobbies: :pranks, country_of_birth: :Germany, height: 162 },
+            {name: "Joffrey Baratheon", cohort: :november, hobbies: :got, country_of_birth: :Portugal, height: 185 },
+            {name: "Norman Bates", cohort: :november, hobbies: :killing, country_of_birth: :Spain, height: 182 }
+        ]
+def display arr
+    puts "Enter cohort"
+    selection = gets.chomp
+    # newarr = []
+  arr.select do |by_cohort|
+   if (by_cohort[:cohort] == selection.to_sym)
+     puts by_cohort[:name]
+   end
+  end
+  end
+
+  display students
