@@ -4,9 +4,9 @@ def input_students
     # create an empty array
     students = []
     # get the first name
-    name = gets.chomp
+    name = gets.strip
 
-    cohort = gets.chomp.to_sym
+    cohort = gets.strip.to_sym
   
     # while the name is not empty, repeat this code
     while !name.empty? && !cohort.empty? do
@@ -14,11 +14,11 @@ def input_students
       students << {name: name, cohort: cohort}
       puts "Now we have #{students.count} student#{'s' if students.count > 1}"
       # get another name from the user
-      name = gets.chomp
+      name = gets.strip
       if (name.empty?)
         name = "empty"
     end
-      cohort = gets.chomp.to_sym
+      cohort = gets.strip.to_sym
       if (cohort.empty?)
         cohort = "empty"
     end
