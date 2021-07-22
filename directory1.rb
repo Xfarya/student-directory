@@ -27,7 +27,17 @@
 # end
 # numbered_names
 
-def first_letter(letter)
+# def first_letter(letter)
+#   students.each do |initial|
+# if ("#{initial[:name][0]}" == letter)
+#     puts "#{initial[:name]}"
+# end
+# end
+# end
+
+# first_letter("N")
+
+def less_than_twelve
     students = [
         {name: "Dr. Hannibal Lecter", cohort: :november, hobbies: :cannibalism, country_of_birth: :Japan, height: 179 },
         {name: "Darth Vader", cohort: :november, hobbies: :spacewars, country_of_birth: :India, height: 169 },
@@ -41,11 +51,11 @@ def first_letter(letter)
         {name: "Joffrey Baratheon", cohort: :november, hobbies: :got, country_of_birth: :Portugal, height: 185 },
         {name: "Norman Bates", cohort: :november, hobbies: :killing, country_of_birth: :Spain, height: 182 }
     ]
-  students.each do |initial|
-if ("#{initial[:name][0]}" == letter)
-    puts "#{initial[:name]}"
-end
-end
+students.each do |student|
+        if "#{student[:name]}".length < 12
+            puts "#{student[:name]}"
+        end
+    end
 end
 
-first_letter("N")
+less_than_twelve
